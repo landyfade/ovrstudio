@@ -1,0 +1,153 @@
+:root {
+  --pr-color: #543b28;
+}
+
+body {
+  font-family: 'Expletus Sans', sans-serif;
+  color: white;
+  background-color: #d7d7d1;
+  min-height: 1000px;
+}
+
+/* Navbar style */
+
+.navbar {
+  z-index: 3;
+  padding-top: 1fr;
+}
+
+.nav-link {
+  transition: all 0.3s;
+  position: relative;
+}
+.nav-link:hover {
+  text-decoration: underline;
+  border-bottom: #c4c414;
+}
+
+* {
+  z-index: 2;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.nav-link {
+  font-size: 16px;
+}
+
+.nav-link.active {
+  font-weight: 500;
+}
+
+/*Navbar Color */
+.nav-color {
+  background-color: #543b28;
+  transition: all ease-in-out 0.5s;
+}
+
+.bg-transparent {
+  transition: all ease-in 0.5s;
+}
+
+/* Home Section */
+#home {
+  background-image: url(aset/homepage.png);
+
+  z-index: 1;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home-tagline h1 {
+  z-index: 3;
+  color: white;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 50px;
+}
+
+.home-tagline p {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 60px;
+  margin-top: 20px;
+  line-height: 30px;
+  width: 87%;
+}
+
+.button-outline-light {
+  width: 155px;
+  height: 50px;
+  background-color: #fff;
+  color: var(--pr-color);
+  border: none;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/* About Section */
+#about {
+  background-color: #d7d7d1;
+}
+
+/* Gallery Section */
+#gallery {
+  background-image: url(aset/bggallery.png);
+  z-index: 1;
+  height: 100vh;
+  background-size: cover;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 80px;
+  align-items: center;
+  grid-gap: 50px;
+}
+
+.grid > article > img {
+  object-fit: cover;
+}
+
+.grid > article {
+  box-shadow: 10px 5px 5px 0x black;
+  border-radius: 30px;
+  text-align: center;
+  background: #543b28;
+  transition: transform;
+}
+
+.grid > article img {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.konten {
+  cursor: progress;
+}
+
+.grid > article:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/*About Section */
+#contact {
+  background-image: linear-gradient(55deg, #c4c414, #000);
+}
